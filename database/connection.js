@@ -10,7 +10,7 @@ const connectWithRetry = async () => {
   isConnecting = true
 
   try {
-    await mongoose.connect(process.env.MONGODB_URI)
+    await mongoose.connect(process.env.MONGO_URL)
     console.log('Successfully connected to MongoDB')
     retryCount = 0 // Reset on successful connection
     isConnecting = false
