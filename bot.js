@@ -3,7 +3,7 @@ const cluster = require('cluster')
 const { QueueManager } = require('./queueManager')
 const numCPUs = require('os').cpus().length
 
-const BOT_TOKEN = '7980025839:AAG5BMGKHUKydOlacwC8xnABliyU9J6IpbI'
+const BOT_TOKEN = process.env.BOT_TOKEN
 const MAX_WORKERS = process.env.MAX_WORKERS || numCPUs
 const MAX_UPDATES_PER_WORKER = 100
 const MAX_QUEUE_SIZE = 3000
